@@ -65,9 +65,7 @@ export const initializeContentStackSdk = (): Stack => {
     region: setRegion(),
     branch: CONTENTSTACK_BRANCH || "main",
   };
-  if (CONTENTSTACK_LIVE_PREVIEW === "true") {
     stackConfig.live_preview = setLivePreviewConfig();
-  }
   return Stack(stackConfig);
 };
 // api host url
@@ -85,5 +83,6 @@ export const generateUrlBasedOnRegion = (): string[] => {
 };
 // prod url validation for custom host
 export const isValidCustomHostUrl = (url=''): boolean => {
-  return url ? !generateUrlBasedOnRegion().includes(url) : false;
+  // return url ? !generateUrlBasedOnRegion().includes(url) : false;
+  return true;
 };
