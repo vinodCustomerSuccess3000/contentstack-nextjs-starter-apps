@@ -43,6 +43,7 @@ function MyApp(props: Props) {
   return (
     <>
       <Head>
+      
         <meta
           name='application-name'
           content='Contentstack-Nextjs-Starter-App'
