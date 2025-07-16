@@ -11,6 +11,12 @@ class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
+<script dangerouslySetInnerHTML={{__html : `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NGWCBQDP');`}}></script>
+
   <script dangerouslySetInnerHTML={{__html : ` !function(){"use strict";var o=window.jstag||(window.jstag={}),r=[];function n(e){o[e]=function(){for(var n=arguments.length,t=new Array(n),i=0;i<n;i++)t[i]=arguments[i];r.push([e,t])}}n("send"),n("mock"),n("identify"),n("pageView"),n("unblock"),n("getid"),n("setid"),n("loadEntity"),n("getEntity"),n("on"),n("once"),n("call"),o.loadScript=function(n,t,i){var e=document.createElement("script");e.async=!0,e.src=n,e.onload=t,e.onerror=i;var o=document.getElementsByTagName("script")[0],r=o&&o.parentNode||document.head||document.body,c=o||r.lastChild;return null!=c?r.insertBefore(e,c):r.appendChild(e),this},o.init=function n(t){return this.config=t,this.loadScript(t.src,function(){if(o.init===n)throw new Error("Load error!");o.init(o.config),function(){for(var n=0;n<r.length;n++){var t=r[n][0],i=r[n][1];o[t].apply(o,i)}r=void 0}()}),this}}();
   // Define config and initialize Lytics tracking tag.
   // - The setup below will disable the automatic sending of Page Analysis Information (to prevent duplicative sends, as this same information will be included in the jstag.pageView() call below, by default)
@@ -48,8 +54,11 @@ class MyDocument extends Document {
           <link href='/favicon.ico' rel='icon' type='image/ico' sizes='16x16' />
           <link rel='apple-touch-icon' href='/path/to/apple-touch-icon.png' />
           <meta name='theme-color' content='#317EFB' />
+
         </Head>
         <body>
+          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGWCBQDP"
+height="0" width="0" style={{display:"none",visibility:"hidden"}}></iframe></noscript>
           <Main />
           <NextScript />
         </body>
