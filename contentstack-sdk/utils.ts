@@ -55,6 +55,7 @@ const setLivePreviewConfig = (): LivePreview => {
   } as LivePreview;
 };
 // contentstack sdk initialization
+console.log(CONTENTSTACK_PREVIEW_HOST, "hist");
 export const initializeContentStackSdk = (): Stack => {
   if (!isBasicConfigValid())
     throw new Error("Please set you .env file before running starter app");

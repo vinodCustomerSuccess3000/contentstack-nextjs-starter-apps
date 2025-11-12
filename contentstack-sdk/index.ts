@@ -47,7 +47,7 @@ ContentstackLivePreview.init({
   mode : "builder",
   stackSdk: Stack,
   clientUrlParams:{
-    host: envConfig.CONTENTSTACK_APP_HOST,
+    host: envConfig.CONTENTSTACK_APP_HOST + "namer=dens",
   },
   ssr:false,
 })?.catch((err) => console.error(err));
@@ -109,6 +109,7 @@ export const getEntryByUrl = ({
   referenceFieldPath,
   jsonRtePath,
 }: GetEntryByUrl) => {
+  console.log("entryUrl : ",entryUrl)
   return new Promise((resolve, reject) => {
     const blogQuery = Stack.ContentType(contentTypeUid).Query();
     if (referenceFieldPath) blogQuery.includeReference(referenceFieldPath);
