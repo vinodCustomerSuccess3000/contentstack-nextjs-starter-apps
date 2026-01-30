@@ -43,7 +43,7 @@ ContentstackLivePreview.init({
   stackDetails: {
     apiKey: envConfig.CONTENTSTACK_API_KEY,
     environment: envConfig.CONTENTSTACK_ENVIRONMENT,
-    branch : process.env.environment || ""
+    branch : process?.env?.environment || ""
   },
   mode : "builder",
   stackSdk: Stack,
@@ -52,7 +52,7 @@ ContentstackLivePreview.init({
   },
   ssr:false,
 })?.catch((err) => console.error(err));
-
+console.log(process?.env);
 export const { onEntryChange } = ContentstackLivePreview;
 
 const renderOption = {
