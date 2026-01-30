@@ -43,6 +43,7 @@ ContentstackLivePreview.init({
   stackDetails: {
     apiKey: envConfig.CONTENTSTACK_API_KEY,
     environment: envConfig.CONTENTSTACK_ENVIRONMENT,
+    branch : process.env.environment || ""
   },
   mode : "builder",
   stackSdk: Stack,
